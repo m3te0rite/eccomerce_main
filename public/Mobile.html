@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overclocked Studios</title>
+    <!--Link To CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Box Icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!--Navbar-->
+    <!--Navbar-->
+    <header>
+        <!--Nav-->
+        <div class="nav container">
+            <!--Logo-->
+            <a href="index.html" class="logo">Overclocked</a>
+            <!--Web Service Buttons-->
+            <nav class="header-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="Electronics.html" class="active">Electronics</a>
+                <a href="Mobile.html" class="active">Mobiles</a>
+                <a href="TechAccessories.html" class="active">Accecories</a>
+            </nav>
+
+            <!--Cart icon-->
+            <i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i>
+            
+            <!--cart-->
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <!--Content-->
+                <div class="cart-content"></div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+                <!-- Buy Button -->
+                <button type="button" class="btn-buy">Pay Now</button>
+                <!--Close Cart-->
+                <i class="bx bx-x" id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Products -->
+    <section class="shop container">
+        <h2 class="section-title">Shop Products</h2>
+        <!-- Shop Content -->
+        <div class="shop-content">
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWfgn1-IFgmKa_dafY2VFXnYpPe27-ihc6PSlK81u0mtVyX4ZtAGjH4iL6xv1yW4rxA8GcH8Ea8xzw5uIBBKgZe-kBHp_aIlT1SKWKDYKlU0MVF3nqO5fkWeNpRSgKR-N2lOkXaWd3OXEFLxxw1rjKGrpMsLemj5BUuh2sJOvALO5umNq-YhDoYJ79wrg/s262/Apple%20Iphone%2014%20Pro-fotor-20230819225929.jpg" alt="" class="product-img">
+                <h2 class="product-title">Apple Iphone 14 Pro</h2>
+                <span class="price">$1000</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHcRQ-2iHQk2DYOCe1nqRUiL3DqJ5zMLnVBOQwTTrN3ft5_OoJZ2D1cN2P7va05bU4lYVH7w5kxlJfUdWIAQ14nmSDYSk2bEHRkne949xJ81RxJOtSFL-Cb0UGKD8CLuIp3j7SH-fBHGg5MLBdXaJkwPtO5ytsHKTVJAjpw9lkS2RzqXjy7SkqZTBaCX8/s262/Google%20Pixel%206a-fotor-2023081923045.jpg" alt="" class="product-img">
+                <h2 class="product-title">Google Pixel 6a</h2>
+                <span class="price">$550</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+            
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdY2mjLjV8eCYFWJOug9-JW3e-RWGBlhgrrVxeODCqjPKxaZrd1oqglIG58YrY_Ed2N8UQZw2Kxh340inF9crDJP8TYRsHodzr7-ck4BnbVBadO1oFRU9q0BqOPoj2gvC81WAmWup7YJHgAD2A4FcFNZEevAZPu-5x77QBgOh2mavs6RaIeXxzXpDMNI8/s262/Poco%20X5%205G-fotor-202308192346.jpg" alt="" class="product-img">
+                <h2 class="product-title">Poco X5 5G</h2>
+                <span class="price">$180</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXHy07IyJ8PSMsIMZDOb8IkooEuInaBkigeNkcXmwWYVBie1M9N9Oxoh6tstcaBiYmR1nmr6yOFdNlZALcoGMaUT1KIOMF1TCQsId7ASYeahVml6j9Ug31nhOr9KY74V1kTg0Yn846kFqJkL_jM6hjn2Y4LuuJyiWMqU7BY-G0PLHf0GfJsPfbM54UUhk/s262/Motorola%20Edge%2040-fotor-2023081923150.jpg" alt="" class="product-img">
+                <h2 class="product-title">Motorola Edge 40</h2>
+                <span class="price">$250</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiC1EFG96LrDDuLu5qVd8O0tdq5xutLIQAbpahhtT0Vqw4iIYYeA3nVOw5MqLUYdYYKWMVdJLCnhE6c364D_LaasaznsB4TbmqitRtynB7n6lJpTVyLSMWELCL-H1Z-vyIShmyWPm8iSdQfsmm2rULgt2x0VLtgDSUjG6HtUVwHCTE05ot55wIQ1_5O5kM/s312/Oneplus%20C2%20Lite.webp" alt="" class="product-img">
+                <h2 class="product-title">OnePlus Nord CE-2 Lite</h2>
+                <span class="price">$150</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjU9iZvQFy1WRfGvkghGQCPsuzJtLh16hwHknQ4x4P7t1CnFCXk8KSHEFRtuu79v3Vfpm2POdMmO3YqIaze2I-XmXZffBh9ogD--jicW3Noe7SsxJXBYmLswU1Sc6-yd5Zgb1pT_qS6j-6iSCbKk0e_p9oK-O7R7KFHv5v3KIfFu90cKsq5Z2p6ojvBhBw/s312/Infinix%20Note%2030%205G.jpeg" alt="" class="product-img">
+                <h2 class="product-title">Infinix Note 30 5G(Sunset Gold, 128GB)</h2>
+                <span class="price">$899</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJmsp4kU9c26I9sZE24uslpGW6ZNX8LSoHc-ZOBnZ2joeLONNM2vQSv20exsnjtRlvVDVWRoxreHKVhBDV5MTA46v3rqnS9Adqjb79W0SfIvIGkRSDrjPmN5O52abMDW2eaS244dY4wyn4o-3UFZcUeBn8f-2LMiHM_3OLlNn4p1uPdPhBFs7vVYwBW2I/s312/Infinix%20Zero.jpeg" alt="" class="product-img">
+                <h2 class="product-title">Infinix ZERO 5G 2023 Turbo(CORAL ORANGE(256GB ROM))</h2>
+                <span class="price">$899</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2H-aqd_sL5tWepHuaWCEcYxp7x_DfzN0FNwYh8WBiyiCTrn67aHEEDJPs59yaOh0YqC7ZdI53iFH3JLeBpus94ErRUZ6OZVROhSco3zRfnrx77sNeQs7xIixW2yVI3s5bAZfeH8hUKdlVcXZSaOkX322rPvIVd90mCCZ2ZUZ2gA_b2dvvY74yghxVifo/s312/Infinix%20Zero%2020.jpeg" alt="" class="product-img">
+                <h2 class="product-title">Infinix Zero 20 (Green Fantacy, 128GB)</h2>
+                <span class="price">$899</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+            
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjkd3YjcUR4uDdUpYytu6XLQySi7FaWE_UKg6Rw4eqfSY9tkTYUCbHZpurtkO3MuxDyDPtSqw_pxJOVa_6fqea0Skgyz3BBqAc5MKvcD0h4A_l0lsHlHBB6WesLT7T246YhqnUWO9uPBteGYDRnfMgDBKDJuvJU9UEnO4_qLldVqw-NVhH8RBIJIFdt8Us/s312/Infininx%20Zero%20Ultra%205g.webp" alt="" class="product-img">
+                <h2 class="product-title">Infinix ZERO 5G(BLACK(8GB RAM||128GB ROM))</h2>
+                <span class="price">$899</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjIF9g_DG-iKuPl6ZU_l2Tn8GU_6n_2WTZN4vSQArLPNBv0jr-LQWd2KxFDzjnmX7uxrP4XWMSsZChoA32R-qiWt3iQgF-deWHWXrnkDEs8Qz7dyoyak-ID2uUGGJEM53-ROuu5XCovZGGdrLctE23jksC4-PUlyX7Xz3Iw2Nhj5TTkloKWS6kIR6MglVg/s416/Infinix%20Zero%2030%205G%20GOLDEN%20HOUR.webp" alt="" class="product-img">
+                <h2 class="product-title">Infinix ZERO 30 5G(Golden Hour(12GB RAM||256GB ROM))</h2>
+                <span class="price">$899</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgPGr-rWDPjMyxorVwnhr4AbvCSgzuhVkOHk5ReLaEM2Sph39tlW5ZCPic8jBPswFYOlaQa1LF-nF-6zaejHKRV5bBsJUGEcHwgbeBTUQFBq9XxP997YipmicvbqVMrawZOC8eatPQ_WOT4pFyf26OfiE6ezGuJCzDxPkh73vYw340lLnbNj3WNKiYeqGg/s312/Infinix%20Zero%2030%205G.webp" alt="" class="product-img">
+                <h2 class="product-title">Infinix Note 30 5G(Sunset Gold, 128GB)</h2>
+                <span class="price">$899</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmM8VRY3TyRcOPq8eMoC-AipmRfWFyNaPnN8y2adYYSga55yqTb3aIU0Gxc7oHJxnKGCuqK46s_9Y5Acj6ZP0EpyxYvREGwCBAZ3aYCNXTgYRpRRngtgYUGpW6zICroEhFoyCmfmI01kb6fgc6dyagAA6GFHxghPwwMkZLpZveWJKjD2QhWqH3nToj0pQ/s312/Nothing%20Phone%20(1)%205g%20Black.webp" alt="" class="product-img">
+                <h2 class="product-title">Nothing Phone (1) (Black, 128GB)</h2>
+                <span class="price">$899</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0su0k6i9fmrxnlD5pIYlKy_VGQZ9gdAaojijAsiTIofTcxkWOOLdH9SEnfOzLHHdUV7JEOl1K0Rc6rCvsNQFjzifpKTNKGY1nDtK0jHxqSzClCRcmZzTg_n4cK0gpkORmZK4XYWkB1qQkJ3kruJ5JjZdAuukHChMzCvc7x0unS7FYFSOF6TlpnOrieCQ/s312/Nothing%20Phone%20(1)%205G%20white.webp" alt="" class="product-img">
+                <h2 class="product-title">Nothing Phone (1) (White, 128GB)</h2>
+                <span class="price">$899</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+
+            <!--Samsung Mobiles-->
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhd-woN_venKZJuLCltRMGZnhLwQ2VtQNQcyUFwFL5QG9xDN4KSGejG7r8vSpbom_26XdH6VSIw_aTlZF45-U6d_yyePt5nkpKVo_j2rFs9abYFjjn65CWTS_Bi4HHFq0Ip29W_kHTiZP2d_rg420tPX67IS7RUYj3n79g4F80q-lMUvrL-OS2XfeiHhXo/s312/Samsung%20Galaxy%20z%20flip%203%205g.webp" alt="" class="product-img">
+                <h2 class="product-title">SAMSUNG Galaxy Z Flip3 5G (Phantom Black, 128 GB)  (8 GB RAM)</h2>
+                <span class="price">$1299</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTDHYPQ1ZhoZaNwXvYpQ7YHD5W8JO2zjcZeKHgCJjwF8ciDzceJ7hfnoPXbAdTaxF8uhu3QexrlRi6um2GY-RWE861DD1BjNKXMyxpnhvhJqQVxMBv6pQ_NMMD6KpFI1Q2cSi2C_t40L8hWAaUhxanm5Kk6S6Q6nupWkveSJxnzYHssOTG6ulAtVB2srE/s312/Samsung%20Galaxy%20S22%20Ultra.webp" alt="" class="product-img">
+                <h2 class="product-title">SAMSUNG Galaxy S22 Ultra 5G (Phantom Black, 256 GB)  (12 GB RAM)</h2>
+                <span class="price">$999</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiGgkTZ6Vw3gs6I1bX3fR0E_j4iwCZpXK2Y8-su-j5WEqBUZU5RPmz75D6kIgZ7hY97AYBln01Zov8tLAKiypuphHrYup8erQ7L7NIJDxjnGKl5Q9JabdmdZOR6XBj6UlxLGvqLLjg0M6xJGPQjBO6-ABdRW7LM1GI-UROKzU1-31hJejz8luY4-aWsWJc/s312/Samsung%20Galaxy%20S22%20Ultra%20(White).webp" alt="" class="product-img">
+                <h2 class="product-title">SAMSUNG Galaxy S22 Ultra 5G (Phantom White, 256 GB)  (12 GB RAM)</h2>
+                <span class="price">$777</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZiPKzDSlPfckrnlrphnATxvifxTXiPOel2ZZ_zBCsJt_XwRMgPTDBUGGERiaa4SZ1-tU_ZFalT2NQv1T8AblZLphlbTNSAkxO4iOWJDa6PM7pTBN5-u-wb0zwA2lWDeswOCXunGkgulMN5RvY4wN0oc2x_c-kBA7VgPkAKOfCLwH6SC8kerl368nU-kw/s312/Samsung%20Galaxy%20F54%205G.webp" alt="" class="product-img">
+                <h2 class="product-title">SAMSUNG Galaxy F54 5G (Meteor Blue, 256 GB)  (8 GB RAM)</h2>
+                <span class="price">$899</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <!--Samsung Mobiles-->
+
+            <!--Oppo Mobiles-->
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNYX_YX4koX86CpzFUV22zJtDIQK6mHbG44H6LwIvRUdpm0C-8mXvTAKlLf2t_TiVcE_3W9S0hDCoYjMwMVM4ieBw7EQuvlzDoFbmSvel9ILXsWfLVx7MMfh3fgWGEWKOormC-2tYwr2WNtBuw3xZxl9zXVX5wJeKXsiFaywra04gIW_SC8cxYwGqwAV8/s312/Oppo%20Reno%2010%20Pro%205G.webp" alt="" class="product-img">
+                <h2 class="product-title">OPPO Reno10 Pro 5G (Glossy Purple, 256 GB)  (12 GB RAM)</h2>
+                <span class="price">$999</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlvDFJm0SnA8d_P41WN8S2lQbePwa8PenJj5IyAEQYEZl7N_KDghP6qx3JLP_xkhqQOhW8FfGvt3xP6L19yZIauzCHspwGE3A4HjM_NVZ9MOHw1GAmJGpRRijkqpj80LMQze_CAyp6m31o3zvh0bISE_5uEcg2KAMJ_MYiW-pEq8n6XWNU2-pPWHmj38A/s416/Oppo%20Reno%208T%205G%20Midnight%20black.webp" alt="" class="product-img">
+                <h2 class="product-title">OPPO Reno8T 5G (Midnight Black, 128 GB)  (8 GB RAM)</h2>
+                <span class="price">$899</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+            <!--Oppo Mobiles-->
+
+            <!--Redmi Mobiles-->
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkqbOlUQNhbdYluHYnHywuC5VcIlnrnFlZ8--oJdtQvGSrSlQmwpdL_-D6bnqZkJZjNsPjEh6u-T25TqxQ6Bk0HCBFhaOA4syeY4sFLJO8BERtCoeS8bBZ0W9x4uz2vnTY7Lt1XjwgdHR27kS0MoZdElbN8jcjw5UBJrAQ6OktvHi07wIyMi7QJuEdCHA/s312/Redmi%20Note%2012%20Pro%20Plus%20%205G%20white.webp" alt="" class="product-img">
+                <h2 class="product-title">REDMI Note 12 Pro+ 5G (Arctic White, 256 GB)  (12 GB RAM)</h2>
+                <span class="price">$699</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBu2c2SXUyLZMZCnUf0fs90ZbThk5jtiBxEBGQJHOAGimF3eTYOHXG4hPj5Q4uiMl33Q8LQWvAMMJNtM1ggC1kL0c8bf9_kNXMpJ6VPhGhvxC_yDPWWJ3kRv84kSZzgl2z7alErLkVr0LGZaJgyfGlGOXGC9Cxz7KrE8I6nDBgidsKnlZJq5kDIQOBDmM/s312/Redmi%20Note%2012%20Pro%20Plus%20%205G.webp" alt="" class="product-img">
+                <h2 class="product-title">REDMI Note 12 Pro+ 5G (Iceberg Blue, 256 GB)  (12 GB RAM)</h2>
+                <span class="price">$699</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+            <!--Redmi Mobiles-->
+
+            <!--Xiomi Mobiles-->
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgUjMY5ZAcGLwO2IZm5tbtwrVCk5G2HqNtRi-N7BL9mupqDgDOiEvA_cFPLmqoM-2u_LVTQTnq2q-BL_l7MUw_1v4Nx0iV-swP29aCJHlTkspxWXniDjDMV4OVMS8HEVpb-vEGXHybIMX87NhcEgpdpo2v3sRCA1yPzyOi9C_ulY-0KIO727_aHbfWH_0s/s312/Xiomi%2012%20pro%205G%20Black.webp" alt="" class="product-img">
+                <h2 class="product-title">Xiaomi 12 Pro 5G (Noir Black, 256 GB)  (8 GB RAM)</h2>
+                <span class="price">$999</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbEbYr81j73uBLnIxjotTVbnlUUyaUDNL7xYe0xVEVsfxW8hMLskvPFoKjR88WEVDdkIALD5VAcAg3vsJG6sKz6rQly9I-oR0ikvrexbyTcbJGdPBa5wZCHK4CJgRjz8t1es5dgfz8vtrB_cdTSkETL-2hGzUDgEXG1i5h372kx3X_A-vu5vH66JRESZQ/s312/Xiomi%2012%20pro%205G%20merun.webp" alt="" class="product-img">
+                <h2 class="product-title">Xiaomi 12 Pro 5G (Opera Mauve, 256 GB)  (12 GB RAM)</h2>
+                <span class="price">$999</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+            <!--Xiomi Mobiles-->
+
+
+            
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">Smartphones</a></li>
+                    <li><a href="#">Tablets</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="footer-social">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 TechTreasureHub. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Link TO JS-->
+    <script>
+        // JavaScript to redirect to the about.html page
+        document.getElementById("aboutLink").addEventListener("click", function() {
+            window.location.href = "about.html";
+        });
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

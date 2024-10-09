@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overclocked Studios</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <!--Nav-->
+        <div class="nav container">
+            <!--Logo-->
+            <a href="index.html" class="logo">Overclocked</a>
+            <!--Web Service Buttons-->
+            <nav class="header-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="Electronics.html" class="active">Electronics</a>
+                <a href="Mobile.html" class="active">Mobiles</a>
+                <a href="TechAccessories.html" class="active">Accecories</a>
+            </nav>
+
+            <!--Cart icon-->
+            <i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i>
+            
+            <!--cart-->
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <!--Content-->
+                <div class="cart-content"></div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+                <!-- Buy Button -->
+                <button type="button" class="btn-buy">Pay Now</button>
+                <!--Close Cart-->
+                <i class="bx bx-x" id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+    
+        <!-- Products Section -->
+        <section class="products container">
+            <h2 class="section-title">Our Products</h2>
+            <!-- Product Cards -->
+
+            <!-- Product 1 - Mobiles -->
+            <div class="product-box-products">
+                <a href="Mobile.html" class="product-link">
+                    <i class="bx bx-mobile"></i>
+                    <h3 class="product-title">Mobiles</h3>
+                    <p class="product-description">Explore our latest mobile phone collection.</p>
+                </a>
+            </div>
+
+            <br>
+
+            <!-- Product 2 - Tech Accessories -->
+            <div class="product-box-products">
+                <a href="TechAccessories.html" class="product-link">
+                    <i class="bx bx-headphone"></i>
+                    <h3 class="product-title">Tech Accessories</h3>
+                    <p class="product-description">Discover a variety of tech accessories for your gadgets.</p>
+                </a>
+            </div>
+
+            <br>
+
+            <!-- Product 3 - Electronics -->
+            <div class="product-box-products">
+                <a href="Electronics.html" class="product-link">
+                    <i class="bx bx-devices"></i>
+                    <h3 class="product-title">Electronics</h3>
+                    <p class="product-description">Browse through our electronic gadgets and appliances.</p>
+                </a>
+            </div>
+        </section>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">Smartphones</a></li>
+                    <li><a href="#">Tablets</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="footer-social">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 TechTreasureHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link TO JS -->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
