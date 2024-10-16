@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overclocked Studios</title>
+    <!--Link To CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Box Icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!--Navbar-->
+    <!--Navbar-->
+    <header>
+        <!--Nav-->
+        <div class="nav container">
+            <!--Logo-->
+            <a href="index.html" class="logo">Overclocked</a>
+            <!--Web Service Buttons-->
+            <nav class="header-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="keyboards.html" class="active">All Keyboards</a>
+                <a href="pc.html" class="active">All PCs</a>
+                <a href="TechAccessories.html" class="active">Accecories</a>
+            </nav>
+
+            <!--Cart icon-->
+            <i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i>
+            
+            <!--cart-->
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <!--Content-->
+                <div class="cart-content"></div>
+                <!--Total-->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+                <!-- Buy Button -->
+                <button type="button" class="btn-buy">Pay Now</button>
+                <!--Close Cart-->
+                <i class="bx bx-x" id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="shop container">
+        <h2 class="section-title">Shop Products</h2>
+        <!-- Shop Content -->
+        <div class="shop-content">
+
+            <!--Laptops-->
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtR4DBWYj3Pqs-9zb-xOcCjTywpB2z9zuE4qUYW_eR26A3dU0Dkq5uIYsSF9DyZuR_Z-H6r1UaQ6xh3oSbLcVbvD10hrkH_MpR4QdMVRTT3GF-N2pFjkpOcsKB5VAK9cwzZOJ8pXhyCCnCgk1vjZxWWQH3L9BfbPGxh7lS4CJevcX2rKQJ1-yIbGkP7Z0/s312/lap-1.webp" alt="" class="product-img">
+                <h2 class="product-title">MSI Core i7 12th Gen 12650H - (16 GB/1 TB SSD/Windows 11 Home/8 GB Graphics/NVIDIA GeForce RTX 4070/240 Hz) Katana 17 B12VGK-672IN Gaming Laptop  (17.3 Inch, Black, 2.6 Kg)</h2>
+                <span class="price">$1200</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFprpTTMf_ds465ssPKWHSi6Yru6o8W3vRhFjD6zaDBNUzsRfu8dvBwUslnwwZoJYEMFNmeuU6Gl6mT10djFUJ58_OqeNI4AXFgB_RE6otZCvH44U2i4ndhxyVjWT4mVnae4tgmW5qCh_7pz2Q54_G_L50bU7RyprrB5I86L4iCTwpYoszPxPMZqbobg8/s312/lap-2.webp" alt="" class="product-img">
+                <h2 class="product-title">Lenovo Legion 5 AMD Ryzen 7 Octa Core 5800H - (16 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/NVIDIA GeForce RTX 3050/120 Hz) 15ACH6 Gaming Laptop  (15.6 Inch, Phantom Blue (Top), Shadow Black (Bottom), 2.4 kg kg, With MS Office)</h2>
+                <span class="price">$1200</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhM_LMfdwTeoq7Dey3NTl38u6iU_O2W0_4PIngj5jzobxiRMPWQqr88eEhVClpbF6zNyYvFV7IioaV3rR_FFJaW_cnE_CEwNUlWmBfXOq-Wkn7OqnAZgZZ0BTRr5D9GxepnmkTTJMp_CRE5GM0KNQJb5qjFYpBwMGXfKklpYDMtmIJjXGpjK51IExIb9yE/s312/lap-3.webp" alt="" class="product-img">
+                <h2 class="product-title">APPLE 2020 Macbook Air M1 - (8 GB/256 GB SSD/Mac OS Big Sur) MGN93HN/A  (13.3 inch, Silver, 1.29 kg)</h2>
+                <span class="price">$800</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaD69w_muupiwU3fw1foOqm3TgxI4jzHcu7hIpWYrZi8Ds4jfex_Iofgwg4jaUf3848xCRe52yZ4_fxz3mor1A94U0nWnuevGFYo-x64CodkrPoKq3-UQuoUq7aRBVFHfYOXoTFB1JAbxG6K8KM0-n4huRds4z2iUBZ-Pb_fDOFT9F4weNf_UPbAwWDVk/s312/lap-4.webp" alt="" class="product-img">
+                <h2 class="product-title">DELL G15 Core i5 12th Gen 12500H - (16 GB/512 GB SSD/Windows 11 Home/4 GB Graphics/NVIDIA GeForce RTX 3050/120 Hz) Gaming Gaming Laptop  (38 cm, Dark Shadow Grey, 2.57 kg, With MS Office)</h2>
+                <span class="price">$1200</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+            <!--Laptops-->
+
+            <!--Tv's-->
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBaAxN_koaj4nw2eAlO21bQcp6XGoHZrksO8AKfPIx3q6ceYGnA85vZ5GyabOmUH6hj6L_kRpsQb8G9r1782tYmslWUH4OW1vqyeM13AulfBtADtfcOSKhquhyndMGMkeYJUllmWR4r9sdj2-x_Kho4YrZLEkbylSCTdFuq64ubUbmUhhaUypXX6LXGvE/s312/Tv-1.jpeg" alt="" class="product-img">
+                <h2 class="product-title">OnePlus U1S 164 cm (65 inch) Ultra HD (4K) LED Smart Android TV with Far field and Dolby Audio  (65UC1A00)</h2>
+                <span class="price">$1500</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEil9sf9g53xRRTv_6OokmI7KoOTHNursUGcVKtW8AOvmzZb5gSEwQjdgS7Al74WzrjrkLJSHhb4J-PByoxOVQ-rR6Tss_IhjLst29462T_PfoEt4MQQPb6lZsfqx_3_d-0Q3-1WoyKft0t72MuL-WEiFlHf6jZNnA9d6UHwPWfs70-b53WFsoIf9jiUrRQ/s312/Tv-2.webp" alt="" class="product-img">
+                <h2 class="product-title">SAMSUNG Crystal 4K iSmart Series 163 cm (65 inch) Ultra HD (4K) LED Smart Tizen TV 2023 Edition  (UA65CUE60AKLXL)</h2>
+                <span class="price">$1400</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmz7wkl44bWU218_T43cmFtLvdcTR2s7zBPOvkItSlqGb7hWeMXAVATgbRManQDxfBR0KliD_mOHZ55c55kHuDINsJigCsFgbOL8-GxZFiry77bdCrmuBXJ2zy4kgmfY2LVsoGVQtRC5MD_nkC56iMEka1_popYPRCpZ6gG3KdyCiVejuHlPKktzWZjzI/s312/Tv-3.webp" alt="" class="product-img">
+                <h2 class="product-title">SONY X82L 138.8 cm (55 inch) Ultra HD (4K) LED Smart Google TV 2023 Edition  (KD-55X82L)</h2>
+                <span class="price">$1200</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+
+            <div class="product-box">
+                <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEge7cnmNPLMCKGXtAhWa2_TM6cAgIa376lnWhVRX-or_t3LEQE7QDLB1qQjP9zgaGKLLWLPk8WRJEF6IsLZxuD__gZd_LMHexcTsLONWjxjgGfT9tEC_TbmG4WvmoldwRSkkFP-WAVqcyX9Y_xy3X7O20GsMHOz3PYionnrQGCR4jtIj2Vj8-zDRnN7OFk/s312/Tv-4.webp" alt="" class="product-img">
+                <h2 class="product-title">Mi Q1 189.34 cm (75 inch) QLED Ultra HD (4K) Smart Android TV 4K QLED | Reality Flow | Local Dimming | Dolby Atmos passthrough eARC* | Dolby Audio | DTS-HD | Vivid Picture Engine</h2>
+                <span class="price">$1400</span>
+                <i class="bx bx-shopping-bag add-cart" ></i>
+            </div>
+            <!--Tv's-->
+
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Products</h3>
+                <ul>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">Smartphones</a></li>
+                    <li><a href="#">Tablets</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="footer-social">
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 TechTreasureHub. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Link TO JS-->
+    <script>
+        // JavaScript to redirect to the about.html page
+        document.getElementById("aboutLink").addEventListener("click", function() {
+            window.location.href = "about.html";
+        });
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
