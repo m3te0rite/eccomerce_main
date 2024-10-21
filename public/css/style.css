@@ -500,7 +500,17 @@ footer {
     align-items: center;
   }
 
-  
+  .section-title2{
+    color: var(--bg-color);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .shop-content2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
 
     
