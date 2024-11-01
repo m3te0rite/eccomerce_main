@@ -518,3 +518,11 @@ footer {
     border: none;
     align-self: center;
   }
+  
+  .widthHeight2{
+    width: 100%;
+    height: 55rem;
+    border: none;
+    align-self: center;
+  }
+
