@@ -31,6 +31,8 @@ let DOMAIN = process.env.DOMAIN;
 
 app.post("/stripe-checkout", async(req, res) => {
     const lineItems = req.body.items.map((item) => {
+       console.log()
+       console.log(item)
        const unitAmount = parseInt(item.price.replace(/[^0-9.-]+/g, '') * 100);
        console.log('item-price:', item.price);
        console.log("unitAmount:",unitAmount);
