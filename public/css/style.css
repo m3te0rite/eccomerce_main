@@ -290,7 +290,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--container-color);
+    color: white;
 }
 .sc-container img{
     width: 200px;
