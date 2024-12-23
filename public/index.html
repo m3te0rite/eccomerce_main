@@ -10,7 +10,6 @@
     <!--Box Icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="img\favicon-removebg-preview.png">
-
 </head>
 <body>
     <!--Navbar-->
@@ -64,7 +63,45 @@
           </div>
         </div>
     </section>
-<!-- Products -->
+
+<!-- Latest Video -->
+
+<section class="video">
+    <div class="video-text-container">
+        <div class="video-text">
+            <h2>Check Out Our Latest Video</h2>
+        </div>
+    </div>
+
+
+    <!--  Video Container -->
+    <div class="video-container" id="videoContainer">
+        <!-- Iframe will be inserted here -->
+    </div>
+
+    <script>
+        const API_KEY = 'AIzaSyAsiAH3ExmbRlyHaMVmjLpUxxvoUbDZvkQ'; // Replace with your API key
+        const CHANNEL_ID = 'UCSC7vUtkE5nqnlDPZpv6FxQ'; // Replace with your channel ID
+
+        async function fetchLatestVideo() {
+            const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&order=date&part=snippet&type=video&maxResults=1`);
+            const data = await response.json();
+            const videoId = data.items[0].id.videoId; // Get the video ID
+            return videoId;
+        }
+
+        async function embedVideo() {
+            const videoId = await fetchLatestVideo();
+            const videoContainer = document.getElementById('videoContainer');
+            videoContainer.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>`;
+        }
+
+        embedVideo();
+    </script>
+</section>
+
+
+<!-- Recently Listed Products -->
 <section class="shop container">
     <h2 class="section-title2">Check Out Our Recently Listed In Stock Items</h2>
     <!-- Shop Content -->

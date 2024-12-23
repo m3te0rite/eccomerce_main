@@ -526,3 +526,42 @@ footer {
     align-self: center;
   }
 
+  .video-text{
+    color: var(--bg-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    background-color: #ff9933;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    align-self: center;
+  }
+
+  .video-text-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-container {
+    max-width: 1000px; /* Limit the maximum width of the container */
+    width: 100%; /* Make it responsive */
+    margin: 0 auto; /* Center the container */
+    background-color: white; /* Optional background color */
+    border-radius: 8px; /* Optional rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.video-container iframe {
+    width: 100%; /* Make the iframe responsive */
+    height: 500px; /* Set a fixed height */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Optional rounded corners */
+}
