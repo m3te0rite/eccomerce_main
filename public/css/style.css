@@ -565,3 +565,41 @@ footer {
     border: none; /* Remove border */
     border-radius: 5px; /* Optional rounded corners */
 }
+
+.container123 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Add padding around the container */
+}
+.item123 {
+    width: 200px; /* Set a fixed width for the thumbnails */
+    height: 250px; /* Set a fixed height for the thumbnails */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    text-align: center; /* Center the text */
+    background-color: #fff; /* Optional: background color for the item */
+    display: flex;
+    flex-direction: column; /* Stack image and caption vertically */
+    justify-content: space-between; /* Space between image and caption */
+}
+.item123 img {
+    width: 100%;
+    height: 70%; /* Adjust height for the image */
+    object-fit: cover; /* Ensures the image covers the div */
+}
+.caption123 {
+    padding: 10px 0; /* Space around the caption */
+    font-weight: bold; /* Make caption text bold */
+    color: #333; /* Caption text color */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-top: 1px solid #ccc; /* Optional: border above caption */
+}
+.item123:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
