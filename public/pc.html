@@ -53,9 +53,19 @@
     </header>
 
     <section class="shop container">
-        <h2 class="section-title">Shop Products</h2>
+        <h2 class="section-title" style="color: white;">Shop PCs</h2>
+        <!-- Sort Menu -->
+        <div class="sort-menu">
+            <label for="sort">Sort by Price: </label>
+            <select id="sort" onchange="sortProducts()">
+                <option value="default">Default</option>
+                <option value="low-to-high">Low to High</option>
+                <option value="high-to-low">High to Low</option>
+            </select>
+        </div>
+        <br>
         <!-- Shop Content -->
-        <div class="shop-content">
+        <div class="shop-content" id="shop-content">
 
             <!--Laptops-->
 
@@ -141,6 +151,30 @@
         </div>
     </footer>
     <!-- Link TO JS-->
+    <script>
+        function sortProducts() {
+            const sortValue = document.getElementById('sort').value;
+            const shopContent = document.getElementById('shop-content');
+            const products = Array.from(shopContent.getElementsByClassName('product-box'));
+
+            products.sort((a, b) => {
+                const priceA = parseFloat(a.querySelector('.price').innerText.replace('$', ''));
+                const priceB = parseFloat(b.querySelector('.price').innerText.replace('$', ''));
+                
+                if (sortValue === 'low-to-high') {
+                    return priceA - priceB;
+                } else if (sortValue === 'high-to-low') {
+                    return priceB - priceA;
+                } else {
+                    return 0;
+                }
+            });
+
+            // Clear and re-append sorted products
+            shopContent.innerHTML = '';
+            products.forEach(product => shopContent.appendChild(product));
+        }
+    </script>
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>
 </body>

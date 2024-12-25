@@ -53,9 +53,20 @@
 
     <!-- Products -->
     <section class="shop container">
-        <h2 class="section-title">Shop Products</h2>
+        <h2 class="section-title" style="color: white;">Shop Keyboards</h2>
+        <!-- Sort Menu -->
+        <div class="sort-menu">
+            <label for="sort">Sort by Price: </label>
+            <select id="sort" onchange="sortProducts()">
+                <option value="default">Default</option>
+                <option value="low-to-high">Low to High</option>
+                <option value="high-to-low">High to Low</option>
+            </select>
+        </div>
+        <br>
+        
         <!-- Shop Content -->
-        <div class="shop-content">
+        <div class="shop-content" id="shop-content">
             <div class="product-box">
                 <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWfgn1-IFgmKa_dafY2VFXnYpPe27-ihc6PSlK81u0mtVyX4ZtAGjH4iL6xv1yW4rxA8GcH8Ea8xzw5uIBBKgZe-kBHp_aIlT1SKWKDYKlU0MVF3nqO5fkWeNpRSgKR-N2lOkXaWd3OXEFLxxw1rjKGrpMsLemj5BUuh2sJOvALO5umNq-YhDoYJ79wrg/s262/Apple%20Iphone%2014%20Pro-fotor-20230819225929.jpg" alt="" class="product-img">
@@ -140,6 +151,28 @@
     </footer>
     <!-- Link TO JS-->
     <script>
+        function sortProducts() {
+            const sortValue = document.getElementById('sort').value;
+            const shopContent = document.getElementById('shop-content');
+            const products = Array.from(shopContent.getElementsByClassName('product-box'));
+
+            products.sort((a, b) => {
+                const priceA = parseFloat(a.querySelector('.price').innerText.replace('$', ''));
+                const priceB = parseFloat(b.querySelector('.price').innerText.replace('$', ''));
+                
+                if (sortValue === 'low-to-high') {
+                    return priceA - priceB;
+                } else if (sortValue === 'high-to-low') {
+                    return priceB - priceA;
+                } else {
+                    return 0;
+                }
+            });
+
+            // Clear and re-append sorted products
+            shopContent.innerHTML = '';
+            products.forEach(product => shopContent.appendChild(product));
+        }
     </script>
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>

@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Tech Accessory 1",
+      "category": "TechAccessories",
+      "description": "Description for tech accessory 1",
+      "price": 19.99,
+      "images": ["img/product1.jpg"]
+    },
+    {
+      "id": 2,
+      "name": "Keyboard 1",
+      "category": "Keyboards",
+      "description": "Description for keyboard 1",
+      "price": 29.99,
+      "images": ["img/product2.jpg"]
+    },
+    {
+      "id": 3,
+      "name": "PC 1",
+      "category": "PC",
+      "description": "Description for PC 1",
+      "price": 499.99,
+      "images": ["img/product3.jpg"]
+    }
+  ]
+}
