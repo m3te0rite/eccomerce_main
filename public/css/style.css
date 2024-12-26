@@ -55,12 +55,7 @@ header {
     
     
 }
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 0;
-}
+
 .logo{
     font-size: 1.1rem;
     color: #1e1e2a;
@@ -242,6 +237,12 @@ header {
     border-radius: 5px;
     transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+.product-box :visited{
+    color: #1e1e2a;
+}
+
+
 .product-box:hover{
     background: var(--container-color);
     border: 1px solid #f0f0f0;
@@ -267,6 +268,7 @@ header {
 }
 .price{
     font-weight: 500;
+    
 }
 .add-cart{
     position: absolute;
