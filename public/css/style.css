@@ -32,9 +32,7 @@ body {
     color: var(--bg-color);
     background-color: #1e1e2a;
 }
-section{
-    padding: 4rem 0 3rem;
-}
+
 .container{
     max-width: 1000px;
     margin: auto;
@@ -236,6 +234,7 @@ header {
     padding: 10px;
     border-radius: 5px;
     transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: #1e1e2a;
 }
 
 .product-box :visited{
@@ -265,9 +264,11 @@ header {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 0.8rem;
+    color: #1e1e2a;
 }
 .price{
     font-weight: 500;
+    color: #1e1e2a;
     
 }
 .add-cart{
@@ -324,6 +325,7 @@ header {
     box-sizing: border-box;
 }
 
+
 /* Style the footer */
 footer {
     background-color: var(--container-color);
@@ -339,6 +341,17 @@ footer {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+.footer-container a{
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-container a:hover{
+    color: #ff9933;
+}
+
+
 
 .footer-section {
     flex: 1;
@@ -586,20 +599,26 @@ footer {
     background-color: #fff; /* Optional: background color for the item */
     display: flex;
     flex-direction: column; /* Stack image and caption vertically */
-    justify-content: space-between; /* Space between image and caption */
+    justify-content: space-between; /* Distribute space between items */
 }
+
 .item123 img {
     width: 100%;
     height: 70%; /* Adjust height for the image */
     object-fit: cover; /* Ensures the image covers the div */
 }
+
 .caption123 {
-    padding: 10px 0; /* Space around the caption */
     font-weight: bold; /* Make caption text bold */
     color: #333; /* Caption text color */
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
     border-top: 1px solid #ccc; /* Optional: border above caption */
+    display: flex; /* Use flexbox for the caption */
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+    height: 30%; /* Set a height for the caption area */
 }
+
 .item123:hover {
     transform: scale(1.05); /* Slightly enlarge on hover */
 }

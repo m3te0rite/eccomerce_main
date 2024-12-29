@@ -27,7 +27,7 @@
                 <a href="products.html" class="active">Products</a>
                 <a href="keyboards.html" class="active">All Keyboards</a>
                 <a href="pc.html" class="active">All PCs</a>
-                <a href="TechAccessories.html" class="active">Accecories</a>
+                <a href="TechAccessories.html" class="active">Accessories</a>
             </nav> 
     </header>
 
@@ -44,8 +44,8 @@
             </div>
             <div class="product-details">
                 <div class="details">
-                    <h2>Edgar Moran Kobhy Chair</h2>
-                    <h3>$150.00</h3>
+                    <h2 id="productTitle">Edgar Moran Kobhy Chair</h2>
+                    <h3 id="productPrice">$150.00</h3>
                     <h4>35% OFF</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quibusdam est illum, unde adipisci neque impedit, enim accusantium incidunt non ipsum, repellat blanditiis. Ullam autem, non quod quo tenetur corrupti.</p>
                 </div>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="sub-btn">
-                    <button class="submit">Buy Now</button>
+                    <button class="submit" id="buyNowBtn">Buy Now</button>
                 </div>
             </div>
         </div>
@@ -92,5 +92,36 @@
     </section>
 
     <script src="./js1/app.js"></script>
+    <script>
+        document.getElementById('buyNowBtn').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            var productTitle = document.getElementById('productTitle').innerText;
+            var productPrice = document.getElementById('productPrice').innerText;
+            var productImg = document.getElementById('productImg').src;
+            var quantity = document.getElementById('quantity').value;
+
+            var item = {
+                title: productTitle,
+                price: productPrice,
+                quantity: quantity,
+                productImg: productImg,
+            };
+
+            // Send the product details to the server for Stripe checkout
+            fetch('/stripe-checkout', {
+                method: 'post',
+                headers: new Headers({'Content-Type': 'application/json'}),
+                body: JSON.stringify({
+                    items: [item],
+                }),
+            })
+            .then((res) => res.json())
+            .then((url) => {
+                location.href = url;
+            })
+            .catch((err) => console.log(err));
+        });
+    </script>
 </body>
 </html>

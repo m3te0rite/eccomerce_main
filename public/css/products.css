@@ -32,8 +32,12 @@
 .product-title {
     font-size: 24px;
     margin-top: 20px;
+    color: #666;
 }
 
+.product-title:visited{
+    color:#666;
+}
 .product-description {
     font-size: 16px;
     color: #666;
