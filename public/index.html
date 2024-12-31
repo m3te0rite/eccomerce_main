@@ -52,19 +52,114 @@
     <br>
     <section class="slidercontainer">
         <div class="slider-wrapper">
-          <div class="slider">
-            <img id="slide-1" src="img/pc1.png" alt=""/>
-            <img id="slide-2" src="https://media.cybernews.com/2020/12/rsz_holynickepic.jpg" alt=""/>
-            <img id="slide-3" src="img/setup1.png" alt=""/>
-          </div>
-          <div class="slider-nav">
-            <a href="#slide-1"></a>
-            <a href="#slide-2"></a>
-            <a href="#slide-3"></a>
-          </div>
+            <button class="slider-arrow left">&#10094;</button>
+            <div class="slider">
+                <img id="slide-1" src="img/pc1.png" alt=""/>
+                <img id="slide-2" src="https://media.cybernews.com/2020/12/rsz_holynickepic.jpg" alt=""/>
+                <img id="slide-3" src="img/setup1.png" alt=""/>
+            </div>
+            <button class="slider-arrow right">&#10095;</button>
+            <div class="slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+            </div>
         </div>
     </section>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slider img');
+            const navLinks = document.querySelectorAll('.slider-nav a');
+            const prevButton = document.querySelector('.slider-arrow.left');
+            const nextButton = document.querySelector('.slider-arrow.right');
+            let currentIndex = 0;
+            const slideInterval = 4500; // 4.5 seconds
+            const bufferTime = 7000; // 7 seconds buffer time after manual interaction
+            let autoSlideTimeout;
+            let bufferTimeout;
+    
+            function goToSlide(index, instant = false) {
+                if (index >= slides.length) {
+                    index = 0;
+                } else if (index < 0) {
+                    index = slides.length - 1;
+                }
+                slider.scrollTo({
+                    left: index * slider.clientWidth,
+                    behavior: instant ? 'auto' : 'smooth'
+                });
+                currentIndex = index;
+                updateNav();
+            }
+    
+            function updateNav() {
+                navLinks.forEach((link, index) => {
+                    link.style.opacity = index === currentIndex ? '1' : '0.75';
+                });
+            }
+    
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                goToSlide(currentIndex);
+            }
+    
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                goToSlide(currentIndex);
+            }
+    
+            function startAutoSlide() {
+                autoSlideTimeout = setTimeout(function() {
+                    nextSlide();
+                    startAutoSlide();
+                }, slideInterval);
+            }
+    
+            function stopAutoSlide() {
+                clearTimeout(autoSlideTimeout);
+            }
+    
+            function resetAutoSlide() {
+                stopAutoSlide();
+                clearTimeout(bufferTimeout);
+                bufferTimeout = setTimeout(startAutoSlide, bufferTime);
+            }
+    
+            nextButton.addEventListener('click', () => {
+                resetAutoSlide();
+                if (currentIndex === slides.length - 1) {
+                    goToSlide(0, true);
+                } else {
+                    nextSlide();
+                }
+            });
+    
+            prevButton.addEventListener('click', () => {
+                resetAutoSlide();
+                if (currentIndex === 0) {
+                    goToSlide(slides.length - 1, true);
+                } else {
+                    prevSlide();
+                }
+            });
+    
+            navLinks.forEach((link, index) => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    resetAutoSlide();
+                    goToSlide(index);
+                });
+            });
+    
+            slider.addEventListener('mouseover', stopAutoSlide);
+            slider.addEventListener('mouseout', startAutoSlide);
+    
+            // Initialize slider
+            updateNav();
+            startAutoSlide();
+        });
+    </script>
 <br>
 <br>
 

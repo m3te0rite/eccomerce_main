@@ -435,14 +435,14 @@ footer {
 .slidercontainer {
     margin-top: 4rem;
 }
-  
-  .slider-wrapper {
+
+.slider-wrapper {
     position: relative;
-    max-width: 80rem;
+    max-width: 70rem;
     margin: 0 auto;
-  }
-  
-  .slider {
+}
+
+.slider {
     display: flex;
     aspect-ratio: 16/9;
     overflow-x: auto;
@@ -452,20 +452,19 @@ footer {
     border-radius: 1.5rem;
     -ms-overflow-style: none; 
     scrollbar-width: none;
-  }
-  
-  
-  .slider::-webkit-scrollbar {
+}
+
+.slider::-webkit-scrollbar {
     display: none;
-  }
-  
-  .slider img {
+}
+
+.slider img {
     flex: 1 0 100%;
     scroll-snap-align: start;
     object-fit: cover;
-  }
-  
-  .slider-nav {
+}
+
+.slider-nav {
     display: flex;
     column-gap: 1rem;
     position: absolute;
@@ -473,20 +472,49 @@ footer {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-  }
-  
-  .slider-nav a {
+}
+
+.slider-nav a {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #ffffff;
     opacity: 0.75;
-    transition: opacity ease 250ms;
-  }
-  
-  .slider-nav a:hover {
+    transition: opacity 0.25s ease, transform 0.25s ease; /* Add transform to transition */
+}
+
+.slider-nav a:hover {
     opacity: 1;
-  }
+    transform: scale(1.4); /* Apply scale on hover */
+}
+
+/* Arrow styles */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out; /* Apply transition to the main class */
+}
+
+.slider-arrow:hover {
+    scale: 1.1;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider-arrow.left {
+    left: 1rem;
+}
+
+.slider-arrow.right {
+    right: 1rem;
+}
 
 
 

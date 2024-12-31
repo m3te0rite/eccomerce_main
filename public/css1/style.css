@@ -45,7 +45,7 @@
     cursor: pointer;
 }
 .main-wrap .product .image-gallery .controls .btn.active{
-    background: #00b4d8;
+    background: #ff9933;
 }
 .main-wrap .product .product-details{
     flex-basis: 53%;
@@ -230,6 +230,30 @@
     }
 }
 
+/* zoom-in photo */
+
+/* Hide the cursor when hovering over the image */
+#productImg {
+    cursor: none;
+}
+
+.zoom-window {
+    position: absolute;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: none;
+    width: 250px; /* Adjust the width as needed */
+    height: 250px; /* Adjust the height as needed */
+    overflow: hidden;
+    z-index: 1000;
+    pointer-events: none; /* Ensure the zoom window doesn't interfere with cursor events */
+}
+
+.zoom-window img {
+    position: absolute;
+    width: 300%; /* Adjust the zoom level as needed */
+    height: auto;
+}
 
 
 
@@ -318,4 +342,22 @@ header {
     margin: auto;
     width: 100%;
 
+}
+
+/* Marking Responsive */
+@media (max-width:1080px){
+    .nav {
+        padding: 12px 0;
+    }
+    section{
+        padding: 3rem 0 2rem;
+    }
+    .container{
+        margin: 0 auto;
+        width: 90%;
+    }
+    .shop{
+        margin-top: 2rem !important;
+    }
+       
 }
