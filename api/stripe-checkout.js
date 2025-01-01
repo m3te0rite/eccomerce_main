@@ -10,6 +10,19 @@ const DOMAIN = process.env.DOMAIN;
 
 app.use(express.json());
 
+// Home Route
+app.get("/", (req, res) => {
+    res.sendFile("index.html", {root: "public"});
+});
+// Success
+app.get("/success", (req, res) => {
+    res.sendFile("success.html", {root: "public"});
+});
+//Cancel
+app.get("/cancel", (req, res) => {
+    res.sendFile("cancel.html", {root: "public"});
+});
+
 app.post("/stripe-checkout", async (req, res) => {
     const lineItems = req.body.items.map((item) => {
        const unitAmount = parseInt(item.price.replace(/[^0-9.-]+/g, '') * 100);
