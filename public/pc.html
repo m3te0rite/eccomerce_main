@@ -9,11 +9,28 @@
     <link rel="stylesheet" href="css/style.css">
     <!--Box Icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="img\favicon-removebg-preview.png">
+    <link rel="icon" href="img/favicon-removebg-preview.png">
 
+    <style>
+    /* Add these styles to your existing styles */
+
+    .price-filter {
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .price-filter label {
+        margin: 0 10px;
+    }
+
+    .price-filter input[type="range"] {
+        width: 150px;
+    }
+    </style>
 </head>
 <body>
-    <!--Navbar-->
     <!--Navbar-->
     <header>
         <!--Nav-->
@@ -27,9 +44,8 @@
                 <a href="products.html" class="active">Products</a>
                 <a href="keyboards.html" class="active">All Keyboards</a>
                 <a href="pc.html" class="active">All PCs</a>
-                <a href="TechAccessories.html" class="active">Accecories</a>
+                <a href="TechAccessories.html" class="active">Accessories</a>
             </nav>
-
 
             <!--Cart icon-->
             <i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i>
@@ -51,12 +67,20 @@
             </div>
         </div>
     </header>
-
     <br>
     <br>
     <br>
     <section class="shop container">
         <h2 class="section-title" style="color: white;">Shop PCs</h2>
+
+        <!-- Price Range Slider -->
+        <div class="price-filter">
+            <label for="min-price">Min Price: <span id="min-price-label">0</span></label>
+            <input type="range" id="min-price" name="min-price" min="0" max="2000" step="10" value="0">
+            <label for="max-price">Max Price: <span id="max-price-label">2000</span></label>
+            <input type="range" id="max-price" name="max-price" min="0" max="2000" step="10" value="2000">
+        </div>
+
         <!-- Sort Menu -->
         <div class="sort-menu">
             <label for="sort">Sort by Price: </label>
@@ -71,8 +95,7 @@
         <div class="shop-content" id="shop-content">
 
             <!--Laptops-->
-
-            <div class="product-box">
+            <div class="product-box" data-price="1200">
                 <a href="msi1200.html">
                 <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtR4DBWYj3Pqs-9zb-xOcCjTywpB2z9zuE4qUYW_eR26A3dU0Dkq5uIYsSF9DyZuR_Z-H6r1UaQ6xh3oSbLcVbvD10hrkH_MpR4QdMVRTT3GF-N2pFjkpOcsKB5VAK9cwzZOJ8pXhyCCnCgk1vjZxWWQH3L9BfbPGxh7lS4CJevcX2rKQJ1-yIbGkP7Z0/s312/lap-1.webp" alt="" class="product-img">
@@ -82,7 +105,7 @@
                 <i class="bx bx-shopping-bag add-cart" ></i>
             </div>
 
-            <div class="product-box">
+            <div class="product-box" data-price="1200">
                 <a href="lenovo1200.html">
                 <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhFprpTTMf_ds465ssPKWHSi6Yru6o8W3vRhFjD6zaDBNUzsRfu8dvBwUslnwwZoJYEMFNmeuU6Gl6mT10djFUJ58_OqeNI4AXFgB_RE6otZCvH44U2i4ndhxyVjWT4mVnae4tgmW5qCh_7pz2Q54_G_L50bU7RyprrB5I86L4iCTwpYoszPxPMZqbobg8/s312/lap-2.webp" alt="" class="product-img">
@@ -92,7 +115,7 @@
                 <i class="bx bx-shopping-bag add-cart" ></i>
             </div>
 
-            <div class="product-box">
+            <div class="product-box" data-price="800">
                 <a href="apple800.html">
                 <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhM_LMfdwTeoq7Dey3NTl38u6iU_O2W0_4PIngj5jzobxiRMPWQqr88eEhVClpbF6zNyYvFV7IioaV3rR_FFJaW_cnE_CEwNUlWmBfXOq-Wkn7OqnAZgZZ0BTRr5D9GxepnmkTTJMp_CRE5GM0KNQJb5qjFYpBwMGXfKklpYDMtmIJjXGpjK51IExIb9yE/s312/lap-3.webp" alt="" class="product-img">
@@ -137,7 +160,7 @@
                 <h3>Connect</h3>
                 <ul>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Forum</li>
                     <li><a href="#">Newsletter</a></li>
                 </ul>
             </div>
@@ -183,6 +206,40 @@
             shopContent.innerHTML = '';
             products.forEach(product => shopContent.appendChild(product));
         }
+
+        function filterProductsByPrice(minPrice, maxPrice) {
+            const products = document.querySelectorAll('.product-box');
+            products.forEach(product => {
+                const productPrice = parseFloat(product.getAttribute('data-price'));
+                if (productPrice >= minPrice && productPrice <= maxPrice) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const minPriceSlider = document.getElementById('min-price');
+            const maxPriceSlider = document.getElementById('max-price');
+            const minPriceLabel = document.getElementById('min-price-label');
+            const maxPriceLabel = document.getElementById('max-price-label');
+
+            function updatePriceFilter() {
+                const minPrice = parseFloat(minPriceSlider.value);
+                const maxPrice = parseFloat(maxPriceSlider.value);
+                minPriceLabel.textContent = minPrice;
+                maxPriceLabel.textContent = maxPrice;
+                filterProductsByPrice(minPrice, maxPrice);
+            }
+
+            minPriceSlider.addEventListener('input', updatePriceFilter);
+            maxPriceSlider.addEventListener('input', updatePriceFilter);
+
+            // Initial filter on page load
+            updatePriceFilter();
+        });
+
     </script>
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>

@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="css/style.css">
     <!--Box Icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="img\favicon-removebg-preview.png">
+    <link rel="icon" href="img/favicon-removebg-preview.png">
 
     <style>
+    
     </style>
 </head>
 <body>
-    <!--Navbar-->
     <!--Navbar-->
     <header>
         <!--Nav-->
@@ -29,7 +29,7 @@
                 <a href="products.html" class="active">Products</a>
                 <a href="keyboards.html" class="active">All Keyboards</a>
                 <a href="pc.html" class="active">All PCs</a>
-                <a href="TechAccessories.html" class="active">Accecories</a>
+                <a href="TechAccessories.html" class="active">Accessories</a>
             </nav>
 
             <!--Cart icon-->
@@ -56,7 +56,16 @@
     <br>
     <br>
     <section class="shop container">
-        <h2 class="section-title" style="color: white;">Shop Accecories</h2>
+        <h2 class="section-title" style="color: white;">Shop Accessories</h2>
+
+        <!-- Price Range Slider -->
+        <div class="price-filter">
+            <label for="min-price">Min Price: <span id="min-price-label">0</span></label>
+            <input type="range" id="min-price" name="min-price" min="0" max="2000" step="10" value="0">
+            <label for="max-price">Max Price: <span id="max-price-label">2000</span></label>
+            <input type="range" id="max-price" name="max-price" min="0" max="2000" step="10" value="2000">
+        </div>
+
         <!-- Sort Menu -->
         <div class="sort-menu">
             <label for="sort">Sort by Price: </label>
@@ -71,7 +80,7 @@
         <div class="shop-content" id="shop-content">
 
             <!--Samsung watches-->
-            <div class="product-box">
+            <div class="product-box" data-price="199">
                 <a href="samsung199.html">
                 <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUu1Z0j5bFoAa5NqdF1eUOL5PpBPtY5mUq8fdtAQOEMx4Y4u-yaDfOEKOOXxXn_EmY-TAF7S6t-N1UXXqkhIxU8XllPACooB6NaATDxKWhESC7QF7eZdpoS4dSqxL8tGRLYhXSXqcws4gOqnKkpGXvGZCkCc13dQFGztv8KfuYq70SaxYotw1KIK0glI8/s612/watch-3.webp" alt="" class="product-img">
@@ -81,7 +90,7 @@
                 <i class="bx bx-shopping-bag add-cart" ></i>
             </div>
 
-            <div class="product-box">
+            <div class="product-box" data-price="280">
                 <a href="samsung280.html">
                 <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzmXxH-Eo2dpJNcbTOK6C3gt7xZSm6MfB20otjPjRWwewESM-KtStpLH69wEttw9gdNIPEXC_UgCOePoAb68M2kHAIrVfqTXFTtwWiVCbxyTD9-RTYfRX6WNbAxkoz_ZyZkJr5PCvDmCgHKbTLjIqg_EzDqUJzPNllYBaiw7snyryDgImMQlcvX8Ezoyk/s612/watch-2.webp" alt="" class="product-img">
@@ -90,7 +99,7 @@
                 </a>
                 <i class="bx bx-shopping-bag add-cart" ></i>
             </div>
-            <div class="product-box">
+            <div class="product-box" data-price="230">
                 <a href="samsung230.html">
                 <!-- Stripe need images that are an online on local server it will not show in stripe checkout page we have to upload online -->
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5iCfwAMXtB5y7v893ujESr99wJxKnjNSOEOIITDqo2k009HyqRWriUDb1Neg5fkQNIcPu-pRONUWFHGUR9wNj4AqE0imMH1b5oCzZ5fe8zymqwHBnwgcv-NiCY08VP3dn6ufYApQpSCmeJEKepxLOg9JtISuZUX1X40N3sq5flHWWMdeW81Ag5QtaXKE/s612/watch-1.webp" alt="" class="product-img">
@@ -182,6 +191,40 @@
             shopContent.innerHTML = '';
             products.forEach(product => shopContent.appendChild(product));
         }
+
+        function filterProductsByPrice(minPrice, maxPrice) {
+            const products = document.querySelectorAll('.product-box');
+            products.forEach(product => {
+                const productPrice = parseFloat(product.getAttribute('data-price'));
+                if (productPrice >= minPrice && productPrice <= maxPrice) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const minPriceSlider = document.getElementById('min-price');
+            const maxPriceSlider = document.getElementById('max-price');
+            const minPriceLabel = document.getElementById('min-price-label');
+            const maxPriceLabel = document.getElementById('max-price-label');
+
+            function updatePriceFilter() {
+                const minPrice = parseFloat(minPriceSlider.value);
+                const maxPrice = parseFloat(maxPriceSlider.value);
+                minPriceLabel.textContent = minPrice;
+                maxPriceLabel.textContent = maxPrice;
+                filterProductsByPrice(minPrice, maxPrice);
+            }
+
+            minPriceSlider.addEventListener('input', updatePriceFilter);
+            maxPriceSlider.addEventListener('input', updatePriceFilter);
+
+            // Initial filter on page load
+            updatePriceFilter();
+        });
+
     </script>
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>

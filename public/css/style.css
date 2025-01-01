@@ -652,3 +652,19 @@ footer {
 }
 
 
+/* min max price filter */
+
+.price-filter {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-filter label {
+    margin: 0 10px;
+}
+
+.price-filter input[type="range"] {
+    width: 150px;
+}
