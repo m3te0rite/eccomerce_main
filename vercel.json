@@ -1,1 +1,14 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }] }
+{ 
+    "version": 2, 
+    "rewrites": [{ 
+        "source": "/(.*)", 
+        "destination": "/api" 
+        }], 
+    
+    "routes": [
+      { "src": "/", "dest": "public/index.html" },
+      { "src": "/success", "dest": "public/success.html" },
+      { "src": "/cancel", "dest": "public/cancel.html" },
+      { "src": "/api/stripe-checkout", "dest": "/api/stripe-checkout.js" }
+    ]
+}
