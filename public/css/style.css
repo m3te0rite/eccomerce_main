@@ -668,3 +668,55 @@ footer {
 .price-filter input[type="range"] {
     width: 150px;
 }
+
+
+/* CSS for the about page */
+
+.about-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #1e1e2a; /* Background color for visibility */
+}
+
+.about {
+    display: flex; /* Create a flex container */
+    width: calc(100% - 40px); /* Take almost the full width, with 20px margin on each side */
+    max-width: 1200px; /* Optional: Set a max width to avoid being too wide on very large screens */
+    margin: 0 20px; /* Margin on left and right */
+    border-radius: 1.8rem; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2), 0 2px 5px rgba(0, 0, 0, 0.3); /* Box shadow properties */
+    background: linear-gradient(to right, #ff9933 50%, #1e1e2a 50%); /* Linear gradient for background */
+    height: auto; /* Auto height to fit content */
+}
+
+.left-half, .right-half {
+    flex: 1; /* Each half takes up equal space */
+    padding: 20px; /* Padding inside each half */
+}
+
+.right-half {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.left-half h2 {
+    color: white; /* Text color inside the left half */
+    font-size: 1.5rem;
+}
+
+.email_link {
+    color: white;
+    text-decoration: none;
+}
+
+.email_link:hover {
+    text-decoration: underline;
+    font-weight: bold; /* Make the link bold on hover */
+}
+
+.email_link:visited {
+    color: white;
+}
