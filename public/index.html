@@ -179,13 +179,13 @@
     </div>
 
     <script>
-        const API_KEY = 'AIzaSyAsiAH3ExmbRlyHaMVmjLpUxxvoUbDZvkQ'; // Replace with your API key
-        const CHANNEL_ID = 'UCSC7vUtkE5nqnlDPZpv6FxQ'; // Replace with your channel ID
+        const API_KEY = 'AIzaSyAsiAH3ExmbRlyHaMVmjLpUxxvoUbDZvkQ'; 
+        const CHANNEL_ID = 'UCSC7vUtkE5nqnlDPZpv6FxQ';
 
         async function fetchLatestVideo() {
             const response = await fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&order=date&part=snippet&type=video&maxResults=1`);
             const data = await response.json();
-            const videoId = data.items[0].id.videoId; // Get the video ID
+            const videoId = data.items[0].id.videoId; // fetch the video ID with get 
             return videoId;
         }
 
