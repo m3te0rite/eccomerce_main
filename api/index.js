@@ -15,12 +15,12 @@ app.use(express.json());
 
 // Home Route
 app.get("/", (req, res) => {
-    res.sendFile("index.html", {root: "public"});
+    res.sendFile("index.html", {root: "public/order-status"});
 });
 
 // Success
 app.get("/success", (req, res) => {
-    res.sendFile("success.html", {root: "public"});
+    res.sendFile("success.html", {root: "public/order-status"});
 });
 
 //Cancel
@@ -58,8 +58,8 @@ app.post("/stripe-checkout", async(req, res) => {
     const session = await stripeGateway.checkout.sessions.create({
         payment_method_types: ["card"],
         mode:"payment",
-        success_url: `${DOMAIN}/order-status/success.html`,
-        cancel_url: `${DOMAIN}/order-status/cancel.html`,
+        success_url: `${DOMAIN}/order-status/success`,
+        cancel_url: `${DOMAIN}/order-status/cancel`,
         line_items: lineItems,
         // Asking Address In Stripe Checkout page
         billing_address_collection: "required",
