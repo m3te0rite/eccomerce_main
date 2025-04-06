@@ -11,15 +11,18 @@ const app = express(process.env.stripe_api);
 app.use(express.static("public"));
 app.use(express.json());
 
+// App Routes:
 
 // Home Route
 app.get("/", (req, res) => {
     res.sendFile("index.html", {root: "public"});
 });
+
 // Success
 app.get("/success", (req, res) => {
     res.sendFile("success.html", {root: "public"});
 });
+
 //Cancel
 app.get("/cancel", (req, res) => {
     res.sendFile("cancel.html", {root: "public"});
