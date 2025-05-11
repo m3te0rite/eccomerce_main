@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import stripe from 'stripe';
-
+import path from 'path';
 
 // Load variables 
 dotenv.config();
@@ -11,23 +11,24 @@ const app = express(process.env.stripe_api);
 app.use(express.static("public"));
 app.use(express.json());
 
+const __dirname = path.resolve();
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // App Routes:
 
 // Home Route
 app.get("/", (req, res) => {
-    res.sendFile("index.html", {root: "public/order-status"});
+    res.sendFile("index.html", {root: "public"});
 });
 
-// Success
+//success
 app.get("/success", (req, res) => {
-    res.sendFile("order-status/success.html", { root: "public" });
+    res.sendFile(path.join(__dirname, "public", "order-status", "success.html"));
 });
 
-// Cancel
+//cancel
 app.get("/cancel", (req, res) => {
-    res.sendFile("order-status/cancel.html", { root: "public" });
+    res.sendFile(path.join(__dirname, "public", "order-status", "cancel.html"));
 });
 
 
