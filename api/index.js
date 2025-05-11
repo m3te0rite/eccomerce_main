@@ -65,7 +65,7 @@ app.post("/stripe-checkout", async(req, res) => {
         payment_method_types: ["card"],
         mode:"payment",
         success_url: `${DOMAIN}/order-status/success.html`,
-        cancel_url: `${DOMAIN}/order-status/cancel.html`,
+        cancel_url: `${DOMAIN}/cancel`,
         line_items: lineItems,
         // Asking Address In Stripe Checkout page
         billing_address_collection: "required",
