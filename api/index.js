@@ -18,7 +18,7 @@ const __dirname = path.resolve();
 
 // Home Route
 app.get("/", (req, res) => {
-    res.sendFile("index.html", {root: "public"});
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 //success
