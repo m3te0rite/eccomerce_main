@@ -22,12 +22,12 @@ app.get("/", (req, res) => {
 
 // Success
 app.get("/success", (req, res) => {
-    res.sendFile("success.html", {root: "public/order-status"});
+    res.sendFile("order-status/success.html", { root: "public" });
 });
 
-//Cancel
+// Cancel
 app.get("/cancel", (req, res) => {
-    res.sendFile("cancel.html", {root: "public/order-status"});
+    res.sendFile("order-status/cancel.html", { root: "public" });
 });
 
 
@@ -65,7 +65,7 @@ app.post("/stripe-checkout", async(req, res) => {
         payment_method_types: ["card"],
         mode:"payment",
         success_url: `${DOMAIN}/order-status/success.html`,
-        cancel_url: `${DOMAIN}/cancel`,
+        cancel_url: `${DOMAIN}/order-status/success.html`,
         line_items: lineItems,
         // Asking Address In Stripe Checkout page
         billing_address_collection: "required",
