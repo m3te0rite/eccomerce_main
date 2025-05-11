@@ -21,6 +21,26 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
+// services page Route
+app.get("/services", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "services.html"));
+});
+
+// Home Route
+app.get("/products", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "products.html"));
+});
+
+// Home Route
+app.get("/all-keyboards", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "allkeyboards.html"));
+});
+
+// Home Route
+app.get("/all-pcs", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "allpcs.html"));
+});
+
 //success
 app.get("/success", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "order-status", "success.html"));
